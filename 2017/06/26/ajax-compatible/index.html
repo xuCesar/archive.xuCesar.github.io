@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Keep Simple & Keep Creative" />
+  <meta name="keywords" content="ajax,javascript," />
 
 
 
@@ -84,12 +84,43 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Keep Simple & Keep Creating">
-<meta property="og:url" content="http://xusz.cn/archives/2016/12/index.html">
+<meta name="description" content="一个基础版的ajax请求流程：
+var xhr = new XMLHttpRequest();
+xhr.open(method, url, async, user, password);
+xhr.send()
+
+xhr.onreadystatechange = function(){
+
+    if(xhr.readyState == 4){
+
+        console.log(xhr.re">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ie6下ajax的兼容处理">
+<meta property="og:url" content="http://xusz.cn/2017/06/26/ajax-compatible/index.html">
 <meta property="og:site_name" content="Keep Simple & Keep Creating">
+<meta property="og:description" content="一个基础版的ajax请求流程：
+var xhr = new XMLHttpRequest();
+xhr.open(method, url, async, user, password);
+xhr.send()
+
+xhr.onreadystatechange = function(){
+
+    if(xhr.readyState == 4){
+
+        console.log(xhr.re">
+<meta property="og:updated_time" content="2017-06-26T10:20:17.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Keep Simple & Keep Creating">
+<meta name="twitter:title" content="ie6下ajax的兼容处理">
+<meta name="twitter:description" content="一个基础版的ajax请求流程：
+var xhr = new XMLHttpRequest();
+xhr.open(method, url, async, user, password);
+xhr.send()
+
+xhr.onreadystatechange = function(){
+
+    if(xhr.readyState == 4){
+
+        console.log(xhr.re">
 
 
 
@@ -107,7 +138,7 @@
   };
 </script>
 
-  <title> Archive | Keep Simple & Keep Creating </title>
+  <title> ie6下ajax的兼容处理 | Keep Simple & Keep Creating </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -128,7 +159,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -226,103 +257,183 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      Um..! 3 posts in total. Keep on posting.
-    </span>
-
+  <div id="posts" class="posts-expand">
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/12/26/VueJs-Notes/" itemprop="url">
-              
-                <span itemprop="name">VueJs Notes</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-12-26T14:52:54+08:00"
-              content="2016-12-26" >
-          12-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/12/26/Mou-For-MacOS/" itemprop="url">
-              
-                <span itemprop="name">Mou For MacOS</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-12-26T12:34:15+08:00"
-              content="2016-12-26" >
-          12-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
 
   
+  
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                ie6下ajax的兼容处理
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-06-26T13:53:03+08:00" content="2017-06-26">
+              2017-06-26
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>一个基础版的ajax请求流程：</p>
+<pre><code>var xhr = new XMLHttpRequest();
+xhr.open(method, url, async, user, password);
+xhr.send()
+
+xhr.onreadystatechange = function(){
+
+    if(xhr.readyState == 4){
+
+        console.log(xhr.responseText)
+
+    }
+
+}
+</code></pre><a id="more"></a>
+<p>上面的代码基本上能够运行在所有的浏览器上，但是在蛋疼的ie6上还是要吐血。ie6下会报出 <code>XMLHttpRequest is undefined</code>。因为ie6以下，不支持这个玩意儿。</p>
+<p>ie6以下采用了 <code>new ActiveXObject(&#39;Microsoft.XMLHTTP&#39;)</code>，这是微软官方出品的一个插件。</p>
+<p>所以代码可以修改成如下：</p>
+<pre><code>var xhr ＝ null;
+
+if( window.XMLHttpRequest ){
+    xhr = new XMLHttpRequest();
+}
+else{
+    xhr = new ActiveXObject(&apos;Microsoft.XMLHTTP&apos;)
+}
+
+xhr.open(method, url, async, user, password);
+xhr.send()
+
+xhr.onreadystatechange = function(){
+
+    if(xhr.readyState == 4){
+
+        console.log(xhr.responseText)
+
+    }
+
+}
+</code></pre><p>增加了一句if语句，判断浏览器是否支持<code>window.XMLHttpRequest</code>，成立就走正常流程，否则就进行兼容处理。</p>
+<p>也可以使用<code>try{} catch(e){}</code>，如下：</p>
+<pre><code>var xhr ＝ null;
+
+try{
+    xhr = new XMLHttpRequest();
+}catch(e){
+    xhr = new ActiveXObject(&apos;Microsoft.XMLHTTP&apos;)
+}
+
+xhr.open(method, url, async, user, password);
+xhr.send()
+
+xhr.onreadystatechange = function(){
+
+    if(xhr.readyState == 4){
+
+        console.log(xhr.responseText)
+
+    }
+
+}
+</code></pre>
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ajax/" rel="tag">#ajax</a>
+          
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/26/VueJs-Notes/" rel="next" title="VueJs Notes">
+                <i class="fa fa-chevron-left"></i> VueJs Notes
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -330,6 +441,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -349,8 +464,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/pic.jpg"
@@ -422,6 +546,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">This post does not have a Table of Contents</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -525,11 +660,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
 
 
   

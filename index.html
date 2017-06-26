@@ -86,7 +86,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Keep Simple & Keep Creating">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://xusz.cn/index.html">
 <meta property="og:site_name" content="Keep Simple & Keep Creating">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Keep Simple & Keep Creating">
@@ -228,6 +228,116 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/06/26/ajax-compatible/" itemprop="url">
+                  ie6下ajax的兼容处理
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2017-06-26T13:53:03+08:00" content="2017-06-26">
+              2017-06-26
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>一个基础版的ajax请求流程：</p>
+<pre><code>var xhr = new XMLHttpRequest();
+xhr.open(method, url, async, user, password);
+xhr.send()
+
+xhr.onreadystatechange = function(){
+
+    if(xhr.readyState == 4){
+
+        console.log(xhr.responseText)
+
+    }
+
+}
+</code></pre>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2017/06/26/ajax-compatible/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -464,7 +574,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -474,7 +584,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
