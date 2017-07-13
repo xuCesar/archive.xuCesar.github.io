@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="ajax,javascript," />
+  <meta name="keywords" content="Javascript,Dom," />
 
 
 
@@ -93,18 +93,39 @@
 
 
 
-<meta name="description" content="平常jquery用的不少，但是有时候只是需要用ajax，从而引入jquery就显得有些臃肿，这里简单封装一下ajax函数，方便以后使用～～～">
+<meta name="description" content="最近时间比较充足，重新整理下自己掌握的DOM知识，也当作复习。
+
+Javascript组成
+ECMAscript – javascript核心标准，也是一个解析器
+DOM – 通过document提供的一些方法或者属性操作页面
+BOM – 通过window提供的方法来操作浏览器
+
+DOMdom简介Document Oblect Model (文档对象模型),提供了一些API，赋予开发者操作页面的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ajax封装">
-<meta property="og:url" content="http://xusz.cn/2017/07/03/ajax封装/index.html">
+<meta property="og:title" content="DOM详解">
+<meta property="og:url" content="http://xusz.cn/2017/07/11/DOM详解/index.html">
 <meta property="og:site_name" content="Keep Simple & Keep Creating">
-<meta property="og:description" content="平常jquery用的不少，但是有时候只是需要用ajax，从而引入jquery就显得有些臃肿，这里简单封装一下ajax函数，方便以后使用～～～">
-<meta property="og:image" content="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=f278371e37d12f2eda08a6322eabbe07/c995d143ad4bd113fa64e1fb5bafa40f4afb0549.jpg">
-<meta property="og:updated_time" content="2017-07-07T05:03:21.000Z">
+<meta property="og:description" content="最近时间比较充足，重新整理下自己掌握的DOM知识，也当作复习。
+
+Javascript组成
+ECMAscript – javascript核心标准，也是一个解析器
+DOM – 通过document提供的一些方法或者属性操作页面
+BOM – 通过window提供的方法来操作浏览器
+
+DOMdom简介Document Oblect Model (文档对象模型),提供了一些API，赋予开发者操作页面的">
+<meta property="og:image" content="http://www.w3school.com.cn/i/ct_htmltree.gif">
+<meta property="og:updated_time" content="2017-07-13T01:26:08.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ajax封装">
-<meta name="twitter:description" content="平常jquery用的不少，但是有时候只是需要用ajax，从而引入jquery就显得有些臃肿，这里简单封装一下ajax函数，方便以后使用～～～">
-<meta name="twitter:image" content="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=f278371e37d12f2eda08a6322eabbe07/c995d143ad4bd113fa64e1fb5bafa40f4afb0549.jpg">
+<meta name="twitter:title" content="DOM详解">
+<meta name="twitter:description" content="最近时间比较充足，重新整理下自己掌握的DOM知识，也当作复习。
+
+Javascript组成
+ECMAscript – javascript核心标准，也是一个解析器
+DOM – 通过document提供的一些方法或者属性操作页面
+BOM – 通过window提供的方法来操作浏览器
+
+DOMdom简介Document Oblect Model (文档对象模型),提供了一些API，赋予开发者操作页面的">
+<meta name="twitter:image" content="http://www.w3school.com.cn/i/ct_htmltree.gif">
 
 
 
@@ -132,13 +153,13 @@
 
 
 
-  <link rel="canonical" href="http://xusz.cn/2017/07/03/ajax封装/"/>
+  <link rel="canonical" href="http://xusz.cn/2017/07/11/DOM详解/"/>
 
 
 
 
 
-  <title>ajax封装 | Keep Simple & Keep Creating</title>
+  <title>DOM详解 | Keep Simple & Keep Creating</title>
   
 
 
@@ -267,7 +288,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://xusz.cn/2017/07/03/ajax封装/">
+    <link itemprop="mainEntityOfPage" href="http://xusz.cn/2017/07/11/DOM详解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cesar Xu">
@@ -284,7 +305,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ajax封装</h1>
+          <h1 class="post-title" itemprop="name headline">DOM详解</h1>
         
 
         <div class="post-meta">
@@ -296,8 +317,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-03T12:28:36+08:00">
-                2017-07-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-11T10:52:16+08:00">
+                2017-07-11
               </time>
             
 
@@ -336,7 +357,7 @@
 
           
           
-             <span id="/2017/07/03/ajax封装/" class="leancloud_visitors" data-flag-title="ajax封装">
+             <span id="/2017/07/11/DOM详解/" class="leancloud_visitors" data-flag-title="DOM详解">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -364,65 +385,61 @@
       
 
       
-        <p><img src="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=f278371e37d12f2eda08a6322eabbe07/c995d143ad4bd113fa64e1fb5bafa40f4afb0549.jpg" width="128" alt=""></p>
-<p>平常jquery用的不少，但是有时候只是需要用ajax，从而引入jquery就显得有些臃肿，这里简单封装一下ajax函数，方便以后使用～～～</p>
-<a id="more"></a>
-<pre><code>/* 封装ajax函数
-       * @param {string}methods http连接的方式，包括POST和GET两种方式
-       * @param {string}url     发送请求的url
-       * @param {object}data    发送的参数，对象类型
-       * @param {function}cb    ajax发送并接收成功调用的回调函数
-       * @param {boolean}async  是否为异步请求，true为异步，false为同步
-*/
-
-function ajax(methods,url,data,cb,async){
-
-    var xhr = null
-
-    try{
-        xhr = new XMLHttpRequest()
-    }catch(e){
-        xhr = new ActiveXObject(&apos;Microsodt.XMLHTTP&apos;)
-    }                
-
-    if(methods == &apos;get&apos; &amp;&amp; data){
-        url += &apos;?&apos; + data
-    }
-
-    xhr.open(methods,url,async)    
-
-    if(methods == &apos;get&apos;){
-        xhr.send()
-    }else{
-        var str = &apos;&apos;
-         for (var key in data){
-             str += key + &quot;=&quot; + data[key] + &quot;&amp;&quot;
-         }
-        xhr.setRequsetHeader(&apos;Content-Type&quot;, &quot;application/x-www-form-urlencoded&apos;)
-        xhr.send(str)
-    }
-
-    xhr.onreadystatechange = function(){
-
-        if(xhr.readystate == 4 &amp;&amp; xhr.status == 400){
-            cb : cb(xhr.responseText)
-        }else{
-            console.log(&apos;ERROR:&apos; + xhr.status)
-        }
-
-    }
-
-}
-</code></pre><p>调用方法如下：</p>
-<pre><code>ajax(&apos;get&apos;,&apos;getData.php&apos;,&apos;&apos;,function(data){
-    var data = JSON.parse(data)
-    console.log(data)
-},true)
-
-&lt;!--
-    这里如果没有参数的话，也需要传入空字符串占位，感觉不是很好
---&gt;    
-</code></pre>
+        <blockquote>
+<p>最近时间比较充足，重新整理下自己掌握的DOM知识，也当作复习。</p>
+</blockquote>
+<h2 id="Javascript组成"><a href="#Javascript组成" class="headerlink" title="Javascript组成"></a>Javascript组成</h2><ol>
+<li>ECMAscript – javascript核心标准，也是一个解析器</li>
+<li>DOM – 通过document提供的一些方法或者属性操作页面</li>
+<li>BOM – 通过window提供的方法来操作浏览器</li>
+</ol>
+<h2 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h2><h3 id="dom简介"><a href="#dom简介" class="headerlink" title="dom简介"></a>dom简介</h3><p>Document Oblect Model (文档对象模型),提供了一些API，赋予开发者操作页面的能力。先上一张dom的结构图：</p>
+<p><img src="http://www.w3school.com.cn/i/ct_htmltree.gif" alt=""></p>
+<p>从上面的图可以看到，DOM结构按照层级划分，可以分为</p>
+<ul>
+<li>父级节点：当前节点的上一级节点</li>
+<li>子级节点：当前节点的下一级节点</li>
+<li>兄弟节点：当前节点的同级节点</li>
+</ul>
+<h3 id="DOM节点类型"><a href="#DOM节点类型" class="headerlink" title="DOM节点类型"></a>DOM节点类型</h3><p>一般，节点至少拥有nodeType、nodeName和nodeValue这三个基本属性。节点类型不同，这三个属性的值也不相同。</p>
+<h4 id="nodeType"><a href="#nodeType" class="headerlink" title="nodeType"></a>nodeType</h4><p>nodeType属性返回节点类型的常数值。不同的类型对应不同的常数值，12种类型分别对应1到12的常数值。常用的有以下5种节点类型：</p>
+<table>
+<thead>
+<tr>
+<th>nodeType</th>
+<th>code</th>
+<th>e.g</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>元素节点</td>
+<td>1</td>
+<td>html标签</td>
+</tr>
+<tr>
+<td>文档节点</td>
+<td>9</td>
+<td>document</td>
+</tr>
+<tr>
+<td>文本节点</td>
+<td>3</td>
+<td>文本／换行</td>
+</tr>
+<tr>
+<td>属性节点</td>
+<td>2</td>
+<td>id,class…</td>
+</tr>
+<tr>
+<td>注释节点</td>
+<td>8</td>
+<td><!-- 这里是注释 --></td>
+</tr>
+</tbody>
+</table>
+<h5 id="未完…"><a href="#未完…" class="headerlink" title="未完…"></a>未完…</h5>
       
     </div>
 
@@ -451,9 +468,9 @@ function ajax(methods,url,data,cb,async){
       
         <div class="post-tags">
           
-            <a href="/tags/ajax/" rel="tag"><i class="fa fa-tag"></i> ajax</a>
+            <a href="/tags/Javascript/" rel="tag"><i class="fa fa-tag"></i> Javascript</a>
           
-            <a href="/tags/javascript/" rel="tag"><i class="fa fa-tag"></i> javascript</a>
+            <a href="/tags/Dom/" rel="tag"><i class="fa fa-tag"></i> Dom</a>
           
         </div>
       
@@ -466,8 +483,8 @@ function ajax(methods,url,data,cb,async){
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/26/ajax-compatible/" rel="next" title="ie6下ajax的兼容处理">
-                <i class="fa fa-chevron-left"></i> ie6下ajax的兼容处理
+              <a href="/2017/07/03/ajax封装/" rel="next" title="ajax封装">
+                <i class="fa fa-chevron-left"></i> ajax封装
               </a>
             
           </div>
@@ -475,10 +492,6 @@ function ajax(methods,url,data,cb,async){
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/11/DOM详解/" rel="prev" title="DOM详解">
-                DOM详解 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -525,8 +538,17 @@ function ajax(methods,url,data,cb,async){
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/photo.jpg"
@@ -617,6 +639,22 @@ function ajax(methods,url,data,cb,async){
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Javascript组成"><span class="nav-number">1.</span> <span class="nav-text">Javascript组成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM"><span class="nav-number">2.</span> <span class="nav-text">DOM</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#dom简介"><span class="nav-number">2.1.</span> <span class="nav-text">dom简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DOM节点类型"><span class="nav-number">2.2.</span> <span class="nav-text">DOM节点类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#nodeType"><span class="nav-number">2.2.1.</span> <span class="nav-text">nodeType</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#未完…"><span class="nav-number">2.2.1.1.</span> <span class="nav-text">未完…</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
