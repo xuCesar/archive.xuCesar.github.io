@@ -1315,7 +1315,7 @@ pre .javascript .function {
   font-size: 26px;
   text-align: center;
   word-break: break-word;
-  font-weight: 400;
+  font-weight: 300;
 }
 @media (max-width: 767px) {
   .posts-expand .post-title {
@@ -1678,7 +1678,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #94782d;
+  background: #cd4974;
 }
 .links-of-blogroll {
   font-size: 13px;
