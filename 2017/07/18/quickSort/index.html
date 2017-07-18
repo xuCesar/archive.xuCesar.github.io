@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="css,css3," />
+  <meta name="keywords" content="Javascript," />
 
 
 
@@ -93,19 +93,25 @@
 
 
 
-<meta name="description" content="最近在做一些手机专题页的开发，过程中遇到了比较多的动画。
-起初，按照设计师的意愿是做成Gif，整体效果还可以，但是相对来说Gif比较难以控制，且质量较大，在移动端加载可能不大友好。（ps：实践后得知，在动画较多的情况下，即使做逐帧，整体的大小并不会缩减多少。）">
+<meta name="description" content="快速排序的思路主要有以下3步：
+从数组中找到一个基准点
+建立2个数组，把数组中的数和基准点进行比较，小于基准点的数放进左边的数组，大于基准点的数放进右边的数组
+利用递归，进行下一次的比较">
 <meta property="og:type" content="article">
-<meta property="og:title" content="css3序列帧动画记录">
-<meta property="og:url" content="http://xusz.cn/2016/07/15/css3序列帧动画记录/index.html">
+<meta property="og:title" content="快速排序">
+<meta property="og:url" content="http://xusz.cn/2017/07/18/quickSort/index.html">
 <meta property="og:site_name" content="Keep Simple & Keep Creating">
-<meta property="og:description" content="最近在做一些手机专题页的开发，过程中遇到了比较多的动画。
-起初，按照设计师的意愿是做成Gif，整体效果还可以，但是相对来说Gif比较难以控制，且质量较大，在移动端加载可能不大友好。（ps：实践后得知，在动画较多的情况下，即使做逐帧，整体的大小并不会缩减多少。）">
-<meta property="og:updated_time" content="2017-07-15T10:55:41.000Z">
+<meta property="og:description" content="快速排序的思路主要有以下3步：
+从数组中找到一个基准点
+建立2个数组，把数组中的数和基准点进行比较，小于基准点的数放进左边的数组，大于基准点的数放进右边的数组
+利用递归，进行下一次的比较">
+<meta property="og:updated_time" content="2017-07-18T07:40:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="css3序列帧动画记录">
-<meta name="twitter:description" content="最近在做一些手机专题页的开发，过程中遇到了比较多的动画。
-起初，按照设计师的意愿是做成Gif，整体效果还可以，但是相对来说Gif比较难以控制，且质量较大，在移动端加载可能不大友好。（ps：实践后得知，在动画较多的情况下，即使做逐帧，整体的大小并不会缩减多少。）">
+<meta name="twitter:title" content="快速排序">
+<meta name="twitter:description" content="快速排序的思路主要有以下3步：
+从数组中找到一个基准点
+建立2个数组，把数组中的数和基准点进行比较，小于基准点的数放进左边的数组，大于基准点的数放进右边的数组
+利用递归，进行下一次的比较">
 
 
 
@@ -133,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="http://xusz.cn/2016/07/15/css3序列帧动画记录/"/>
+  <link rel="canonical" href="http://xusz.cn/2017/07/18/quickSort/"/>
 
 
 
 
 
-  <title>css3序列帧动画记录 | Keep Simple & Keep Creating</title>
+  <title>快速排序 | Keep Simple & Keep Creating</title>
   
 
 
@@ -268,7 +274,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://xusz.cn/2016/07/15/css3序列帧动画记录/">
+    <link itemprop="mainEntityOfPage" href="http://xusz.cn/2017/07/18/quickSort/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cesar Xu">
@@ -285,7 +291,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">css3序列帧动画记录</h1>
+          <h1 class="post-title" itemprop="name headline">快速排序</h1>
         
 
         <div class="post-meta">
@@ -297,8 +303,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-07-15T18:39:06+08:00">
-                2016-07-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-18T15:11:00+08:00">
+                2017-07-18
               </time>
             
 
@@ -337,7 +343,7 @@
 
           
           
-             <span id="/2016/07/15/css3序列帧动画记录/" class="leancloud_visitors" data-flag-title="css3序列帧动画记录">
+             <span id="/2017/07/18/quickSort/" class="leancloud_visitors" data-flag-title="快速排序">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -365,19 +371,15 @@
       
 
       
-        <p>最近在做一些手机专题页的开发，过程中遇到了比较多的动画。</p>
-<p>起初，按照设计师的意愿是做成Gif，整体效果还可以，但是相对来说Gif比较难以控制，且质量较大，在移动端加载可能不大友好。（ps：实践后得知，在动画较多的情况下，即使做逐帧，整体的大小并不会缩减多少。）<br><a id="more"></a><br>小白时期，用css写动画，都是各种图片各种百分比各种算，帧数多的时候，直接就把自己弄晕了。像下面：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">@keyframes Animation&#123;</div><div class="line">	0% &#123;//...&#125;</div><div class="line">	10%&#123;//...&#125;</div><div class="line">	20%&#123;//...&#125;</div><div class="line">	30%&#123;//...&#125;</div><div class="line">	40%&#123;//...&#125;</div><div class="line">	50%&#123;//...&#125;</div><div class="line">	60%&#123;//...&#125;</div><div class="line">	70%&#123;//...&#125;</div><div class="line">	80%&#123;//...&#125;</div><div class="line">	90%&#123;//...&#125;</div><div class="line">	100%&#123;//...&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>这还是动画帧数的数量较少，且是整数帧的情况下。当数量再多的时候，再这样去写的话，那真得把自己写傻逼了…</p>
-<p>不过，现在已经有不少自动化的工具，可以帮我们处理一些基本的工作，提高开发效率。</p>
-<p>最近的项目中，考虑到上面几点原因。就没有采用传统的写法。</p>
-<p>下面一段是基础版的循环spirit图片代码。</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">@keyframes Animation&#123;</div><div class="line">  @<span class="keyword">for</span> <span class="variable">$i</span> from 0 through 4 &#123;        <span class="comment">// 4列</span></div><div class="line">     @<span class="keyword">for</span> <span class="variable">$j</span> from 0 through 5 &#123;	    <span class="comment">// 5行</span></div><div class="line">        #&#123;(<span class="variable">$i</span>*4+<span class="variable">$j</span>)*5&#125;%&#123;</div><div class="line">            <span class="attribute">background-position</span>: <span class="variable">$j</span>/<span class="number">3</span>*<span class="number">100%</span> <span class="variable">$i</span>/<span class="number">4</span>*<span class="number">100%</span>;</div><div class="line">        &#125;</div><div class="line">      &#125;  </div><div class="line">  &#125;</div><div class="line">  100%&#123;</div><div class="line">    <span class="attribute">background-position</span>: <span class="number">100%</span> <span class="number">100%</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//$i -- spirit列数</span></div><div class="line"><span class="comment">//$j -- spirit行数</span></div></pre></td></tr></table></figure>
-<p>上面代码会根据图片的行列数，循环每一个定位点。只要处理好图片，然后根据行列数，修改对应的值即可。</p>
-<p>但是，这样，每一个动画都要重写一遍基础代码，就显得有些繁琐和臃肿。下面一段是sass封装的@mixin, 需要使用的时候，传入参数调用即可。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line">@mixin frames($col,$row,$fps) &#123;</div><div class="line">  @if $col == 1 and $row == 2 &#123; //一列两行</div><div class="line">    from, to &#123;</div><div class="line">      background-position: 0 0;</div><div class="line">    &#125;</div><div class="line">    50% &#123;</div><div class="line">      background-position: 0 100%;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  @else if $col == 2 and $row == 1 &#123; //一行两列</div><div class="line">    from, to &#123;</div><div class="line">      background-position: 0 0;</div><div class="line">    &#125;</div><div class="line">    50% &#123;</div><div class="line">      background-position: 100% 0;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  @else &#123;</div><div class="line">    $f:0;</div><div class="line">    $fc:$col;</div><div class="line">    $fr:$row;</div><div class="line">    @if $col == 1 &#123; //一列多行</div><div class="line">      $fc:2;</div><div class="line">    &#125;</div><div class="line">    @if $row==1 &#123; //一行多列</div><div class="line">      $fr:2;</div><div class="line">    &#125;</div><div class="line">    @for $i from 0 through $row - 1&#123; //因为有0，所以-1</div><div class="line">      @for $j from 0 through $col - 1&#123;</div><div class="line">        @if $f&lt;=($fps - 1) &#123;</div><div class="line">          #&#123;1/($fps - 1)*$f*100%&#125;&#123;</div><div class="line">            background-position:#&#123;1/($fc - 1)*$j*100%&#125; #&#123;1/($fr - 1)*$i*100%&#125;;</div><div class="line">          &#125;</div><div class="line">          $f:$f+1;</div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//调用方法</div><div class="line">frames(2,3,6)  //2行3列共6帧图片</div></pre></td></tr></table></figure>
-<p>以上，先记录到这里。</p>
-
+        <h3 id="快速排序的思路主要有以下3步："><a href="#快速排序的思路主要有以下3步：" class="headerlink" title="快速排序的思路主要有以下3步："></a>快速排序的思路主要有以下3步：</h3><ol>
+<li>从数组中找到一个基准点</li>
+<li>建立2个数组，把数组中的数和基准点进行比较，小于基准点的数放进左边的数组，大于基准点的数放进右边的数组</li>
+<li><p>利用递归，进行下一次的比较</p>
+<a id="more"></a>
+</li>
+</ol>
+<h3 id="代码实现-从小到大"><a href="#代码实现-从小到大" class="headerlink" title="代码实现(从小到大)"></a>代码实现(从小到大)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">quickSort</span>(<span class="params">arr</span>)</span>&#123;</div><div class="line">	</div><div class="line">	<span class="keyword">if</span>(arr.length &lt;= <span class="number">1</span>)&#123;</div><div class="line">		<span class="keyword">return</span> arr;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="keyword">var</span> num = <span class="built_in">Math</span>.floor(arr.length/<span class="number">2</span>);</div><div class="line">	<span class="keyword">var</span> numValue = arr.splice(num,<span class="number">1</span>)</div><div class="line">	</div><div class="line">	<span class="keyword">var</span> left = [],</div><div class="line">		right = [];</div><div class="line">	</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;arr.length; i++ )&#123;</div><div class="line">		<span class="keyword">if</span>(arr[i] &lt; numValue)&#123;</div><div class="line">			left.push(arr[i])</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">else</span>&#123;</div><div class="line">			right.push(arr[i])</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="keyword">return</span> quickSort(left).concat([numValue],quickSort(right))</div><div class="line">	</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> arr1 = [<span class="number">9</span>,<span class="number">4</span>,<span class="number">15</span>,<span class="number">0</span>,<span class="number">33</span>,<span class="number">16</span>,<span class="number">7</span>,<span class="number">28</span>]</div><div class="line"><span class="built_in">console</span>.log(quickSort(arr1))</div></pre></td></tr></table></figure>
+<h3 id="代码实现-从大到小"><a href="#代码实现-从大到小" class="headerlink" title="代码实现(从大到小)"></a>代码实现(从大到小)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">quickSort</span>(<span class="params">arr</span>)</span>&#123;</div><div class="line">	</div><div class="line">	<span class="keyword">if</span>(arr.length &lt;= <span class="number">1</span>)&#123;</div><div class="line">		<span class="keyword">return</span> arr;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="keyword">var</span> num = <span class="built_in">Math</span>.floor(arr.length/<span class="number">2</span>);</div><div class="line">	<span class="keyword">var</span> numValue = arr.splice(num,<span class="number">1</span>)</div><div class="line">	</div><div class="line">	<span class="keyword">var</span> left = [],</div><div class="line">		right = [];</div><div class="line">	</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;arr.length; i++ )&#123;</div><div class="line">		<span class="keyword">if</span>(arr[i] &lt; numValue)&#123;</div><div class="line">			right.push(arr[i])</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">else</span>&#123;</div><div class="line">			</div><div class="line">			left.push(arr[i])</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="keyword">return</span> quickSort(left).concat([numValue],quickSort(right))</div><div class="line">	</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> arr1 = [<span class="number">8</span>,<span class="number">3</span>,<span class="number">14</span>,<span class="number">1</span>,<span class="number">45</span>,<span class="number">26</span>,<span class="number">17</span>,<span class="number">11</span>]</div><div class="line"><span class="built_in">console</span>.log(quickSort(arr1))</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -406,9 +408,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/css/" rel="tag"><i class="fa fa-tag"></i> css</a>
-          
-            <a href="/tags/css3/" rel="tag"><i class="fa fa-tag"></i> css3</a>
+            <a href="/tags/Javascript/" rel="tag"><i class="fa fa-tag"></i> Javascript</a>
           
         </div>
       
@@ -421,15 +421,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/07/11/DOM详解/" rel="next" title="DOM详解">
+                <i class="fa fa-chevron-left"></i> DOM详解
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/26/Mou-For-MacOS/" rel="prev" title="Mou For MacOS">
-                Mou For MacOS <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -476,8 +476,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/photo.jpg"
@@ -568,6 +577,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#快速排序的思路主要有以下3步："><span class="nav-number">1.</span> <span class="nav-text">快速排序的思路主要有以下3步：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码实现-从小到大"><span class="nav-number">2.</span> <span class="nav-text">代码实现(从小到大)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码实现-从大到小"><span class="nav-number">3.</span> <span class="nav-text">代码实现(从大到小)</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
