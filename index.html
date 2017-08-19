@@ -263,6 +263,158 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://xusz.cn/2017/08/19/backbone初探（二）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Cesar Xu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/photo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Keep Simple & Keep Creating">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/19/backbone初探（二）/" itemprop="url">backbone初探（二）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-19T21:50:44+08:00">
+                2017-08-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端技术/" itemprop="url" rel="index">
+                    <span itemprop="name">前端技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/08/19/backbone初探（二）/" class="leancloud_visitors" data-flag-title="backbone初探（二）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="backbone入门"><a href="#backbone入门" class="headerlink" title="backbone入门"></a>backbone入门</h2><h3 id="backbone的依赖"><a href="#backbone的依赖" class="headerlink" title="backbone的依赖"></a>backbone的依赖</h3><blockquote>
+<p>Backbone唯一重度依赖的是Underscore.js( &gt;= 1.5.0)（愚人码头注：Underscore.js 中文文档请查看 <a href="http://www.css88.com/doc/underscore/" target="_blank" rel="external">http://www.css88.com/doc/underscore/</a>）。基于RESTful（一个架构样式的网络系统）的约束，histroy的支持依赖于Backbone.Router ，DOM处理依赖于 Backbone.View，包括jQuery ( &gt;= 1.11.0), 和 json2.js对旧的IE浏览器的支持。（模仿Underscore 和 jQuery 的APIs，例如 Lo-Dash 和 Zepto，在不同的兼容性下也一样能运行）</p>
+</blockquote>
+<p>以上ctrl + c 于<a href="http://www.css88.com/doc/backbone/" target="_blank" rel="external">Backbone.js(1.1.2) API中文文档</a></p>
+<h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><h3 id="直接创建对象"><a href="#直接创建对象" class="headerlink" title="直接创建对象"></a>直接创建对象</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//引入库</span></div><div class="line">&lt;script src=<span class="string">"scripts/jquery-3.0.0.min.js"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;script src=<span class="string">"scripts/underscore-min.js"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;script src=<span class="string">"scripts/backbone-min.js"</span>&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 直接创建对象</span></div><div class="line"><span class="keyword">var</span> model = <span class="keyword">new</span> Backbone.Model();</div><div class="line"></div><div class="line"><span class="keyword">var</span> view = <span class="keyword">new</span> Backbone.View()</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(model)</div><div class="line"></div><div class="line"><span class="comment">// 设置属性</span></div><div class="line">model.set(<span class="string">'name'</span>,<span class="string">'OldWang'</span>)</div><div class="line">model.set(&#123;<span class="attr">name</span>:<span class="string">'OldWang'</span> , <span class="attr">age</span>:<span class="number">30</span>&#125;)</div><div class="line"></div><div class="line"><span class="comment">// 获取属性</span></div><div class="line"><span class="built_in">console</span>.log(model.get(<span class="string">'name'</span>))  <span class="comment">// 'OldWang'</span></div><div class="line"><span class="built_in">console</span>.log(model.get(<span class="string">'age'</span>))   <span class="comment">// 30</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">var</span> model1 = <span class="keyword">new</span> Backbone.Model(&#123;<span class="attr">name</span>: <span class="string">'hello'</span>&#125;)</div><div class="line"><span class="keyword">var</span> model2 = <span class="keyword">new</span> Backbone.Model(&#123;<span class="attr">name</span>: <span class="string">'world'</span>&#125;)</div><div class="line"></div><div class="line"><span class="keyword">var</span> models = <span class="keyword">new</span> Backbone.Collection();</div><div class="line"></div><div class="line">models.add(model1);</div><div class="line">models.add(model2);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(models)) <span class="comment">// [&#123;"name":"OldWang"&#125;,&#123;"name":"OldLi"&#125;]</span></div></pre></td></tr></table></figure>
+<h3 id="构造函数添加实例方法和静态方法"><a href="#构造函数添加实例方法和静态方法" class="headerlink" title="构造函数添加实例方法和静态方法"></a>构造函数添加实例方法和静态方法</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//backbone的继承</span></div><div class="line"><span class="keyword">var</span> Obj = Backbone.Model.extend(&#123;   <span class="comment">// 接收2个对象参数，第1个为参数为实例方法的集合；第2个为静态方法的集合</span></div><div class="line">	<span class="keyword">default</span>:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		name: <span class="string">'老王'</span>,</div><div class="line">	&#125;,</div><div class="line">	<span class="attr">init</span>:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;  <span class="comment">// 实例方法</span></div><div class="line">		<span class="built_in">console</span>.log(<span class="string">'init'</span>)</div><div class="line">	&#125;,</div><div class="line">	<span class="attr">move</span>:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="built_in">console</span>.log(<span class="string">'move'</span>)</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">&#125;,&#123;</div><div class="line">	<span class="attr">concel</span>:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;  <span class="comment">// 静态方法</span></div><div class="line">		<span class="built_in">console</span>.log(<span class="string">'concel'</span>)</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;)</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">var</span> model = <span class="keyword">new</span> Obj;</div><div class="line">model.a()       <span class="comment">// init</span></div><div class="line">Obj.b();        <span class="comment">// move</span></div><div class="line">Obj.get(<span class="string">'name'</span>) <span class="comment">// 老王</span></div></pre></td></tr></table></figure>
+<p><strong>未完</strong></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://xusz.cn/2017/08/19/初探backbone（一）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1664,7 +1816,7 @@ xhr.onreadystatechange = function(){
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
