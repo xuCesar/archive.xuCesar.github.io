@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="javascript,backbone,MVC," />
+  <meta name="keywords" content="Keep Simple & Keep Creative" />
 
 
 
@@ -93,18 +93,12 @@
 
 
 
-<meta name="description" content="什么是backbone?backbone的中文文档介绍如下：Backbone.js为复杂WEB应用程序提供模型(models)、集合(collections)、视图(views)的结构。其中模型用于绑定键值数据和自定义事件；集合附有可枚举函数的丰富API； 视图可以声明事件处理函数，并通过RESRful JSON接口连接到应用程序。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="初探backbone（一）">
-<meta property="og:url" content="http://xusz.cn/2017/08/19/初探backbone（一）/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Keep Simple & Keep Writing">
+<meta property="og:url" content="http://xusz.cn/page/2/index.html">
 <meta property="og:site_name" content="Keep Simple & Keep Writing">
-<meta property="og:description" content="什么是backbone?backbone的中文文档介绍如下：Backbone.js为复杂WEB应用程序提供模型(models)、集合(collections)、视图(views)的结构。其中模型用于绑定键值数据和自定义事件；集合附有可枚举函数的丰富API； 视图可以声明事件处理函数，并通过RESRful JSON接口连接到应用程序。">
-<meta property="og:image" content="http://xusz.cn/../../../../images/backbone1.png">
-<meta property="og:updated_time" content="2017-08-19T13:54:21.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="初探backbone（一）">
-<meta name="twitter:description" content="什么是backbone?backbone的中文文档介绍如下：Backbone.js为复杂WEB应用程序提供模型(models)、集合(collections)、视图(views)的结构。其中模型用于绑定键值数据和自定义事件；集合附有可枚举函数的丰富API； 视图可以声明事件处理函数，并通过RESRful JSON接口连接到应用程序。">
-<meta name="twitter:image" content="http://xusz.cn/../../../../images/backbone1.png">
+<meta name="twitter:title" content="Keep Simple & Keep Writing">
 
 
 
@@ -132,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://xusz.cn/2017/08/19/初探backbone（一）/"/>
+  <link rel="canonical" href="http://xusz.cn/page/2/"/>
 
 
 
 
 
-  <title>初探backbone（一） | Keep Simple & Keep Writing</title>
+  <title>Keep Simple & Keep Writing</title>
   
 
 
@@ -163,7 +157,9 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left 
+   page-home 
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -256,9 +252,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -267,7 +263,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://xusz.cn/2017/08/19/初探backbone（一）/">
+    <link itemprop="mainEntityOfPage" href="http://xusz.cn/2016/07/15/css3序列帧动画记录/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cesar Xu">
@@ -284,7 +280,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">初探backbone（一）</h1>
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/07/15/css3序列帧动画记录/" itemprop="url">css3序列帧动画记录</a></h1>
         
 
         <div class="post-meta">
@@ -296,8 +294,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-19T20:28:36+08:00">
-                2017-08-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-07-15T18:39:06+08:00">
+                2016-07-15
               </time>
             
 
@@ -336,7 +334,7 @@
 
           
           
-             <span id="/2017/08/19/初探backbone（一）/" class="leancloud_visitors" data-flag-title="初探backbone（一）">
+             <span id="/2016/07/15/css3序列帧动画记录/" class="leancloud_visitors" data-flag-title="css3序列帧动画记录">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -364,101 +362,55 @@
       
 
       
-        <h2 id="什么是backbone"><a href="#什么是backbone" class="headerlink" title="什么是backbone?"></a>什么是backbone?</h2><p><strong>backbone的中文文档介绍如下：</strong><br>Backbone.js为复杂WEB应用程序提供模型(models)、集合(collections)、视图(views)的结构。其中模型用于绑定键值数据和自定义事件；集合附有可枚举函数的丰富API； 视图可以声明事件处理函数，并通过RESRful JSON接口连接到应用程序。<br><a id="more"></a></p>
-<p>所以，backbone就是一个实现web前端MVC模式的JS库。</p>
-<p>首先，模式是一种解决问题的通用方法。在前端开发中有两个模式被关注的比较多。框架模式与设计模式是包含与被包含的关系，就是说一个框架模式可以包含很多种设计模式。</p>
-<p>设计模式：工厂模式，观察者模式…<br>框架模式：MVC，MVP，MVVM…</p>
-<ul>
-<li>M：model （模型 －－ 数据）</li>
-<li>V：view （视图  －－ ui）</li>
-<li>C：controller（控制器  －－ 连接视图与模型）</li>
-</ul>
-<h2 id="backbone的模块"><a href="#backbone的模块" class="headerlink" title="backbone的模块"></a>backbone的模块</h2><ul>
-<li>事件驱动方法（Events）</li>
-<li>数据模型（Model）</li>
-<li>模型器集合（Collection）</li>
-<li>路由器（Router）</li>
-<li>历史管理（History）</li>
-<li>同步服务器方式（Sync）</li>
-<li>视图（含事件行为和渲染页面）（View）</li>
-</ul>
-<p><img src="../../../../images/backbone1.png" style="width:320px"></p>
-<p><strong>未完…</strong></p>
-
+        
+          <p>最近在做一些手机专题页的开发，过程中遇到了比较多的动画。</p>
+<p>起初，按照设计师的意愿是做成Gif，整体效果还可以，但是相对来说Gif比较难以控制，且质量较大，在移动端加载可能不大友好。（ps：实践后得知，在动画较多的情况下，即使做逐帧，整体的大小并不会缩减多少。）<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/07/15/css3序列帧动画记录/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
 
     <div>
       
-        
-
-      
     </div>
 
     <div>
       
-        
-
-      
     </div>
 
     <div>
-      
-        
-
       
     </div>
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/javascript/" rel="tag"><i class="fa fa-tag"></i> javascript</a>
-          
-            <a href="/tags/backbone/" rel="tag"><i class="fa fa-tag"></i> backbone</a>
-          
-            <a href="/tags/MVC/" rel="tag"><i class="fa fa-tag"></i> MVC</a>
-          
-        </div>
+
+      
+
       
 
       
       
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/08/16/base64-to-blob/" rel="next" title="base64 to blob">
-                <i class="fa fa-chevron-left"></i> base64 to blob
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/08/19/backbone初探（二）/" rel="prev" title="backbone初探（二）">
-                backbone初探（二） <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
@@ -466,10 +418,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
-
 
         </div>
         
@@ -489,17 +437,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/photo.jpg"
@@ -590,22 +529,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是backbone"><span class="nav-number">1.</span> <span class="nav-text">什么是backbone?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#backbone的模块"><span class="nav-number">2.</span> <span class="nav-text">backbone的模块</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -726,10 +649,10 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-
+  
 
   
 
