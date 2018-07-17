@@ -1313,7 +1313,6 @@ pre .javascript .function {
 }
 .posts-expand .post-title {
   font-size: 26px;
-  text-align: center;
   word-break: break-word;
   font-weight: 300;
 }
@@ -1360,11 +1359,10 @@ pre .javascript .function {
   font-size: 16px;
 }
 .posts-expand .post-meta {
-  margin: 3px 0 60px 0;
+  margin: 3px 0 10px 0;
   color: #999;
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 12px;
-  text-align: center;
 }
 .posts-expand .post-meta .post-category-list {
   display: inline-block;
@@ -1413,15 +1411,15 @@ pre .javascript .function {
   }
 }
 .post-button {
-  margin-top: 50px;
+  margin-top: 0px;
 }
 .post-button .btn {
   color: #555;
   font-size: 14px;
   background: #fff;
-  border-radius: 2px;
   line-height: 2;
-  margin: 0 4px 8px 4px;
+  border: 1px solid #555;
+  font-size: 12px;
 }
 .post-button .fa-fw {
   width: 1.285714285714286em;
@@ -1488,11 +1486,10 @@ pre .javascript .function {
 }
 .posts-expand .post-eof {
   display: block;
-  margin: 80px auto 60px;
+  margin: 30px 0;
   width: 8%;
   height: 1px;
   background: #ccc;
-  text-align: center;
 }
 .post:last-child .post-eof.post-eof.post-eof {
   display: none;
@@ -1678,7 +1675,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #8aed28;
+  background: #ffa;
 }
 .links-of-blogroll {
   font-size: 13px;
