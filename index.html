@@ -487,39 +487,14 @@
 
       
         
-          
-            <a id="more"></a>
-<h3 id="let和const"><a href="#let和const" class="headerlink" title="let和const"></a>let和const</h3><p>es6新增了let和const命令</p>
-<ul>
-<li>let：声明一个变量，与var相似</li>
-<li>const：声明一个常量，常量不可变化</li>
-</ul>
-<h4 id="let的基本概念"><a href="#let的基本概念" class="headerlink" title="let的基本概念"></a>let的基本概念</h4><ul>
-<li><p>使用let声明的变量，只在其声明的代码块内有效</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">	<span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">	<span class="keyword">let</span> b = <span class="number">2</span>;</div><div class="line">	<span class="built_in">console</span>.log(b)  <span class="comment">// 2</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(b)  <span class="comment">// b is not defined</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>使用let声明的变量，在域解析的时候不会被提升</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(a)  <span class="comment">//undefined</span></div><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(b)  <span class="comment">//b is not defined</span></div><div class="line"><span class="keyword">let</span> b = <span class="number">2</span>;</div></pre></td></tr></table></figure>
-</li>
-<li><p>使用let,不允许在用一个作用域内，声明已经存在的变量</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line"><span class="keyword">let</span> a = <span class="number">2</span>;  <span class="comment">// 报错:Duplicate declaration</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>let在for循环中的应用<br>一个经典的循环问题：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> oUl = <span class="built_in">document</span>.getElementById(<span class="string">'ul'</span>);</div><div class="line"><span class="keyword">var</span> aLi = oUl.getElementsByTagName(<span class="string">'li'</span>);</div><div class="line"></div><div class="line"><span class="keyword">for</span>( <span class="keyword">var</span> i = <span class="number">0</span>; i &lt; aLi.length; i++)&#123;</div><div class="line">	aLi[i].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="built_in">console</span>.log(i)   <span class="comment">// 这里i始终打印出循环完成后的结果 ：3</span></div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//解决的方式主要有两种：自定义属性和闭包</span></div><div class="line"><span class="comment">//自定义属性</span></div><div class="line"><span class="keyword">for</span>( <span class="keyword">var</span> i = <span class="number">0</span>; i &lt; aLi.length; i++)&#123;</div><div class="line">	aLi[i].index = i;    <span class="comment">// 自定义属性</span></div><div class="line">	aLi[i].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="built_in">console</span>.log(i)   <span class="comment">// 0 1 2</span></div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//闭包</span></div><div class="line"><span class="keyword">for</span>( <span class="keyword">var</span> i = <span class="number">0</span>; i &lt; aLi.length; i++)&#123;</div><div class="line">	(<span class="function"><span class="keyword">function</span>(<span class="params">i</span>)</span>&#123;</div><div class="line">		<span class="built_in">console</span>.log(i)   <span class="comment">// 0 1 2</span></div><div class="line">	&#125;)(i)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//使用let声明i，可以直接打印出i的值</span></div><div class="line"><span class="keyword">for</span>( <span class="keyword">let</span> i = <span class="number">0</span>; i &lt; aLi.length; i++)&#123;</div><div class="line">	aLi[i].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="built_in">console</span>.log(i)   <span class="comment">// 0 1 2</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="const的基本概念"><a href="#const的基本概念" class="headerlink" title="const的基本概念"></a>const的基本概念</h4><p>const命令的特点与let前3条特点相似：</p>
-<ul>
-<li>只在其声明的代码块内有效</li>
-<li>在域解析的时候不会被提升</li>
-<li>不允许在用一个作用域内，声明已经存在的变量</li>
-</ul>
-<ul>
-<li>const声明的基本类型的常量不可改变，如果是对象，其引用不可以被改变，但是内部的数据允许改变。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> o = &#123;<span class="attr">age</span>: <span class="number">20</span>&#125;;</div><div class="line"></div><div class="line">o = <span class="number">12</span>;     <span class="comment">// 报错： o is read-only</span></div><div class="line">o.age = <span class="number">30</span>; <span class="comment">// 允许改变内部的数据</span></div></pre></td></tr></table></figure>
-</li>
-</ul>
-
-          
+          <p>First and Foremost</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/08/es6学习笔记/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
