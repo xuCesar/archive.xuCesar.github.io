@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Javascript," />
+  <meta name="keywords" content="git,github," />
 
 
 
@@ -93,18 +93,33 @@
 
 
 
-<meta name="description" content="快速排序的思路主要有以下3步： 从数组中找到一个基准点 建立2个数组，把数组中的数和基准点进行比较，小于基准点的数放进左边的数组，大于基准点的数放进右边的数组 利用递归，进行下一次的比较">
-<meta name="keywords" content="Javascript">
+<meta name="description" content="上一篇主要说了git的安装以及基本操作，这篇继续研究git的分支。">
+<meta name="keywords" content="git,github">
 <meta property="og:type" content="article">
-<meta property="og:title" content="快速排序">
-<meta property="og:url" content="http://xusz.cn/2017/07/18/quickSort/index.html">
+<meta property="og:title" content="Git 学习笔记（二）">
+<meta property="og:url" content="http://xusz.cn/2018/08/11/Git-学习笔记（二）/index.html">
 <meta property="og:site_name" content="Keep it simple">
-<meta property="og:description" content="快速排序的思路主要有以下3步： 从数组中找到一个基准点 建立2个数组，把数组中的数和基准点进行比较，小于基准点的数放进左边的数组，大于基准点的数放进右边的数组 利用递归，进行下一次的比较">
+<meta property="og:description" content="上一篇主要说了git的安装以及基本操作，这篇继续研究git的分支。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-07-18T07:40:28.000Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/af9756a0ly1fu60at1c5dj20vm05njs9.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/af9756a0ly1fu5y8qppwcj20vg03at9d.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/af9756a0ly1fu5ydsyuifj20vi050wfl.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/af9756a0ly1fu5yg1somej20vc04wq3u.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/af9756a0ly1fu5yyrxgblj20uq0lhtd0.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/af9756a0ly1fu5z3bdd9fj20uk06mwg0.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/af9756a0ly1fu603ykn4fj20uc07ijst.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/af9756a0ly1fu624gk67cj20wu07kabw.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/af9756a0ly1fu6274a4boj20x20e60vo.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/af9756a0ly1fu63wzb9ktj20ww040my1.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/af9756a0ly1fu641zsjbwj229m0rcagn.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/af9756a0ly1fu649muwhbj20x207qwgj.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/af9756a0ly1fu64evceu5j20ww07eq4n.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/af9756a0ly1fu64kgfgedj20x006ogmx.jpg">
+<meta property="og:updated_time" content="2018-08-11T14:40:11.133Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="快速排序">
-<meta name="twitter:description" content="快速排序的思路主要有以下3步： 从数组中找到一个基准点 建立2个数组，把数组中的数和基准点进行比较，小于基准点的数放进左边的数组，大于基准点的数放进右边的数组 利用递归，进行下一次的比较">
+<meta name="twitter:title" content="Git 学习笔记（二）">
+<meta name="twitter:description" content="上一篇主要说了git的安装以及基本操作，这篇继续研究git的分支。">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/af9756a0ly1fu60at1c5dj20vm05njs9.jpg">
 
 
 
@@ -132,13 +147,13 @@
 
 
 
-  <link rel="canonical" href="http://xusz.cn/2017/07/18/quickSort/"/>
+  <link rel="canonical" href="http://xusz.cn/2018/08/11/Git-学习笔记（二）/"/>
 
 
 
 
 
-  <title>快速排序 | Keep it simple</title>
+  <title>Git 学习笔记（二） | Keep it simple</title>
   
 
 
@@ -267,7 +282,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://xusz.cn/2017/07/18/quickSort/">
+    <link itemprop="mainEntityOfPage" href="http://xusz.cn/2018/08/11/Git-学习笔记（二）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cesar Xu">
@@ -284,7 +299,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">快速排序</h1>
+          <h1 class="post-title" itemprop="name headline">Git 学习笔记（二）</h1>
         
 
         <div class="post-meta">
@@ -296,8 +311,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-18T15:11:00+08:00">
-                2017-07-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-11T18:30:01+08:00">
+                2018-08-11
               </time>
             
 
@@ -336,7 +351,7 @@
 
           
           
-             <span id="/2017/07/18/quickSort/" class="leancloud_visitors" data-flag-title="快速排序">
+             <span id="/2018/08/11/Git-学习笔记（二）/" class="leancloud_visitors" data-flag-title="Git 学习笔记（二）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -364,15 +379,55 @@
       
 
       
-        <h3 id="快速排序的思路主要有以下3步："><a href="#快速排序的思路主要有以下3步：" class="headerlink" title="快速排序的思路主要有以下3步："></a>快速排序的思路主要有以下3步：</h3><ol>
-<li>从数组中找到一个基准点</li>
-<li>建立2个数组，把数组中的数和基准点进行比较，小于基准点的数放进左边的数组，大于基准点的数放进右边的数组</li>
-<li><p>利用递归，进行下一次的比较</p>
+        <blockquote>
+<p>上一篇主要说了git的安装以及基本操作，这篇继续研究git的分支。</p>
+</blockquote>
 <a id="more"></a>
-</li>
-</ol>
-<h3 id="代码实现-从小到大"><a href="#代码实现-从小到大" class="headerlink" title="代码实现(从小到大)"></a>代码实现(从小到大)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">quickSort</span>(<span class="params">arr</span>)</span>&#123;</div><div class="line">	</div><div class="line">	<span class="keyword">if</span>(arr.length &lt;= <span class="number">1</span>)&#123;</div><div class="line">		<span class="keyword">return</span> arr;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="keyword">var</span> num = <span class="built_in">Math</span>.floor(arr.length/<span class="number">2</span>);</div><div class="line">	<span class="keyword">var</span> numValue = arr.splice(num,<span class="number">1</span>)</div><div class="line">	</div><div class="line">	<span class="keyword">var</span> left = [],</div><div class="line">		right = [];</div><div class="line">	</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;arr.length; i++ )&#123;</div><div class="line">		<span class="keyword">if</span>(arr[i] &lt; numValue)&#123;</div><div class="line">			left.push(arr[i])</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">else</span>&#123;</div><div class="line">			right.push(arr[i])</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="keyword">return</span> quickSort(left).concat([numValue],quickSort(right))</div><div class="line">	</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> arr1 = [<span class="number">9</span>,<span class="number">4</span>,<span class="number">15</span>,<span class="number">0</span>,<span class="number">33</span>,<span class="number">16</span>,<span class="number">7</span>,<span class="number">28</span>]</div><div class="line"><span class="built_in">console</span>.log(quickSort(arr1))</div></pre></td></tr></table></figure>
-<h3 id="代码实现-从大到小"><a href="#代码实现-从大到小" class="headerlink" title="代码实现(从大到小)"></a>代码实现(从大到小)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">quickSort</span>(<span class="params">arr</span>)</span>&#123;</div><div class="line">	</div><div class="line">	<span class="keyword">if</span>(arr.length &lt;= <span class="number">1</span>)&#123;</div><div class="line">		<span class="keyword">return</span> arr;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="keyword">var</span> num = <span class="built_in">Math</span>.floor(arr.length/<span class="number">2</span>);</div><div class="line">	<span class="keyword">var</span> numValue = arr.splice(num,<span class="number">1</span>)</div><div class="line">	</div><div class="line">	<span class="keyword">var</span> left = [],</div><div class="line">		right = [];</div><div class="line">	</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;arr.length; i++ )&#123;</div><div class="line">		<span class="keyword">if</span>(arr[i] &lt; numValue)&#123;</div><div class="line">			right.push(arr[i])</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">else</span>&#123;</div><div class="line">			</div><div class="line">			left.push(arr[i])</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="keyword">return</span> quickSort(left).concat([numValue],quickSort(right))</div><div class="line">	</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> arr1 = [<span class="number">8</span>,<span class="number">3</span>,<span class="number">14</span>,<span class="number">1</span>,<span class="number">45</span>,<span class="number">26</span>,<span class="number">17</span>,<span class="number">11</span>]</div><div class="line"><span class="built_in">console</span>.log(quickSort(arr1))</div></pre></td></tr></table></figure>
+<h4 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h4><p>当我们初始化仓库的时候，系统会默认创建一个名为<code>master</code>的分支，其也被约定俗成为版本库的主分支。</p>
+<p>继续上一个test仓库。查看下当前本地版本库的内容以及状态。当前提交的分支为origin下的master分支。为什么要查看下版本库的状态呢？</p>
+<ul>
+<li>跟踪文件的状态</li>
+<li>确保当前设备在当前分支下是否存在未提交的更改，减少<strong><font color="#f40">冲突</font></strong>的产生。</li>
+</ul>
+<p>所以，随时查看状态是一个好习惯~~&#x1F914;</p>
+<p><img src="https://ws1.sinaimg.cn/large/af9756a0ly1fu60at1c5dj20vm05njs9.jpg" alt=""></p>
+<p>首先<code>git branch</code>查看下分支，<code>*</code>表示当前版本在哪个分支下。</p>
+<p><img src="https://ws1.sinaimg.cn/large/af9756a0ly1fu5y8qppwcj20vg03at9d.jpg" alt=""></p>
+<h5 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h5><p>使用<font color="#f40"><code>git branch dev</code></font>创建一个分支名为<code>dev</code>的新分支，分支名随意~</p>
+<p><img src="https://ws1.sinaimg.cn/large/af9756a0ly1fu5ydsyuifj20vi050wfl.jpg" alt=""></p>
+<h5 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h5><p>使用<font color="#f40"><code>git checkout dev</code></font>切换到刚才创建的<code>dev</code>分支，注意<code>*</code>已经在<code>dev</code>的前面了</p>
+<p><img src="https://ws1.sinaimg.cn/large/af9756a0ly1fu5yg1somej20vc04wq3u.jpg" alt=""></p>
+<p>我们在<code>dev</code>分支上新建一个index.js文件，然后查看状态并push到远端。</p>
+<p><img src="https://ws1.sinaimg.cn/large/af9756a0ly1fu5yyrxgblj20uq0lhtd0.jpg" alt=""></p>
+<p>ok，我们对比一下<code>master</code>和<code>dev</code>分支下的内容。可以看到，<code>master</code>分支下少了一个刚才创建的index.js文件。这也印证了前面说的的分支之间各有状态，互相独立。</p>
+<p><img src="https://ws1.sinaimg.cn/large/af9756a0ly1fu5z3bdd9fj20uk06mwg0.jpg" alt=""></p>
+<h5 id="分支合并"><a href="#分支合并" class="headerlink" title="分支合并"></a>分支合并</h5><p>初始化的时候会创建<code>master</code>分支，默认为主分支。当我们在<code>dev</code>分支上的开发完成后，使用<font color="#f60"><code>git merge</code></font>将<code>dev</code>分支上的内容合并到<code>master</code>主分支。下图可以看到index.js文件已经在<code>master</code>分支上了。所以，<code>dev</code>已经被成功合并。</p>
+<p><img src="https://ws1.sinaimg.cn/large/af9756a0ly1fu603ykn4fj20uc07ijst.jpg" alt=""></p>
+<h5 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h5><p>使用<font color="#f40"><code>git checkout -b examination</code></font>创建并切换到<code>examination</code>分支。修改index.js文件。执行<code>git commit -a -m</code>命令将修改提交到分支。</p>
+<p><img src="https://ws1.sinaimg.cn/large/af9756a0ly1fu624gk67cj20wu07kabw.jpg" alt=""></p>
+<p>切换到<code>master</code>分支，并查看状态。</p>
+<p><img src="https://ws1.sinaimg.cn/large/af9756a0ly1fu6274a4boj20x20e60vo.jpg" alt=""></p>
+<p>继续修改index.js文件，新增一个函数并提交。这个时候执行<font color="#f40"><code>git merge</code></font>就会引发冲突。</p>
+<p><img src="https://ws1.sinaimg.cn/large/af9756a0ly1fu63wzb9ktj20ww040my1.jpg" alt=""></p>
+<p>这个时候是可以<font color="#f40"><code>git push</code></font>，但是冲突还会存在。所以我们还是要把冲突解决掉。查看工作区的文件，会发现冲突的地方已经被打上了tag，我们可以很清晰的处理掉冲突。</p>
+<p><img src="https://ws1.sinaimg.cn/large/af9756a0ly1fu641zsjbwj229m0rcagn.jpg" alt=""></p>
+<p>我们可以手动解决冲突，也可以借助IDE的插件快速解决，看你习惯了~解决完冲突，<font color="#f40"><code>git add .</code> <code>git commit -m</code></font>，然后<font color="#f40"><code>git status</code></font>查看状态，可以看到master超前2个版本~</p>
+<p><img src="https://ws1.sinaimg.cn/large/af9756a0ly1fu649muwhbj20x207qwgj.jpg" alt=""></p>
+<p>ok,执行<font color="#f40"><code>git push</code></font>推送~</p>
+<p><img src="https://ws1.sinaimg.cn/large/af9756a0ly1fu64evceu5j20ww07eq4n.jpg" alt=""></p>
+<h5 id="拉取版本"><a href="#拉取版本" class="headerlink" title="拉取版本"></a>拉取版本</h5><p>继续切换到examination分支<font color="#f40"><code>git checkout examination</code></font>，执行<font color="#f40"><code>git pull origin master</code></font>，拉取<code>master</code>分手上更新的内容到<code>examination</code>分支。</p>
+<p><img src="https://ws1.sinaimg.cn/large/af9756a0ly1fu64kgfgedj20x006ogmx.jpg" alt=""></p>
+<hr>
+<h4 id="名词理解（仅个人）"><a href="#名词理解（仅个人）" class="headerlink" title="名词理解（仅个人）"></a>名词理解（仅个人）</h4><p>暂无</p>
+<h4 id="命令总结"><a href="#命令总结" class="headerlink" title="命令总结"></a>命令总结</h4><p><code>git branch dev</code>：切换分支</p>
+<p><code>git branch -d dev</code>: 删除分支</p>
+<p><code>git checkout dev</code>：创建分支</p>
+<p><code>git checkout -b examination</code>： 创建并切换分支</p>
+<p><code>git merge</code>: 合并分支</p>
+<p><code>git pull origin master</code>：拉取远端分支版本</p>
+<h4 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h4><p>ok，以上差不多就是分支的创建，切换，合并以及冲突解决的内容了~&#x1F92A;&#x1F92A;&#x1F92A;</p>
+<p>不对的地方，还请指正~&#x1F92A;&#x1F92A;&#x1F92A;</p>
+
       
     </div>
 
@@ -401,7 +456,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Javascript/" rel="tag"><i class="fa fa-tag"></i> Javascript</a>
+            <a href="/tags/git/" rel="tag"><i class="fa fa-tag"></i> git</a>
+          
+            <a href="/tags/github/" rel="tag"><i class="fa fa-tag"></i> github</a>
           
         </div>
       
@@ -414,8 +471,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/11/DOM详解/" rel="next" title="DOM详解">
-                <i class="fa fa-chevron-left"></i> DOM详解
+              <a href="/2018/08/08/Git 学习笔记/" rel="next" title="Git 学习笔记（一）">
+                <i class="fa fa-chevron-left"></i> Git 学习笔记（一）
               </a>
             
           </div>
@@ -423,10 +480,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/08/16/base64-to-blob/" rel="prev" title="base64 to blob">
-                base64 to blob <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -584,7 +637,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#快速排序的思路主要有以下3步："><span class="nav-number">1.</span> <span class="nav-text">快速排序的思路主要有以下3步：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码实现-从小到大"><span class="nav-number">2.</span> <span class="nav-text">代码实现(从小到大)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码实现-从大到小"><span class="nav-number">3.</span> <span class="nav-text">代码实现(从大到小)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#分支"><span class="nav-number">1.</span> <span class="nav-text">分支</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#创建分支"><span class="nav-number">1.1.</span> <span class="nav-text">创建分支</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#切换分支"><span class="nav-number">1.2.</span> <span class="nav-text">切换分支</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分支合并"><span class="nav-number">1.3.</span> <span class="nav-text">分支合并</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#解决冲突"><span class="nav-number">1.4.</span> <span class="nav-text">解决冲突</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#拉取版本"><span class="nav-number">1.5.</span> <span class="nav-text">拉取版本</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#名词理解（仅个人）"><span class="nav-number">2.</span> <span class="nav-text">名词理解（仅个人）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#命令总结"><span class="nav-number">3.</span> <span class="nav-text">命令总结</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#结语"><span class="nav-number">4.</span> <span class="nav-text">结语</span></a></li></ol></div>
             
 
           </div>
