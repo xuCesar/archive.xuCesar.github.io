@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Keep Simple & Keep Creative" />
+  <meta name="keywords" content="react,i18n," />
 
 
 
@@ -94,13 +94,14 @@
 
 
 <meta name="description" content="i18n——Internationalization的简称，它表明的意思是使产品具有能轻松适配指定语言和文化的能力。听起来相当唬人啊！">
+<meta name="keywords" content="react,i18n">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一次i18n的记录">
 <meta property="og:url" content="http://xusz.cn/2018/10/04/一次i18n的记录/index.html">
 <meta property="og:site_name" content="Keep it simple">
 <meta property="og:description" content="i18n——Internationalization的简称，它表明的意思是使产品具有能轻松适配指定语言和文化的能力。听起来相当唬人啊！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-06T07:11:34.783Z">
+<meta property="og:updated_time" content="2018-10-08T13:49:42.823Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一次i18n的记录">
 <meta name="twitter:description" content="i18n——Internationalization的简称，它表明的意思是使产品具有能轻松适配指定语言和文化的能力。听起来相当唬人啊！">
@@ -306,6 +307,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端技术/" itemprop="url" rel="index">
+                    <span itemprop="name">前端技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -365,7 +388,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// App.js</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line"></div><div class="line">  getLocaleData (lang) &#123;</div><div class="line">      <span class="keyword">let</span> result = &#123;&#125;;</div><div class="line">      <span class="keyword">switch</span> (lang) &#123;</div><div class="line">        <span class="keyword">case</span> <span class="string">'zh-CN'</span>:</div><div class="line">          result = <span class="built_in">require</span>(<span class="string">'./locales/zh-Hans/zh-Hans.js'</span>);</div><div class="line">          <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">case</span> <span class="string">'en-US'</span>:</div><div class="line">          result = <span class="built_in">require</span>(<span class="string">'./locales/en-US/en-US.js'</span>);</div><div class="line">          <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">default</span>:</div><div class="line">          result = <span class="built_in">require</span>(<span class="string">'./locales/zh-Hans/zh-Hans.js'</span>);</div><div class="line">      &#125;</div><div class="line"></div><div class="line">      <span class="keyword">return</span> result.default || result;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    ...</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>我们使用了<a href="https://mobile.ant.design/index-cn" target="_blank" rel="external">antd-mobile</a>，它内置的国际化组件<code>LocaleProvider</code>，可以全局配置antd-mobile相关的i18n文案。它接收一个<code>locale</code>属性，值是当前对应的语言包。</p>
 <blockquote>
-<p>LocaleProvider使用React的context特性，只需在应用外围包裹一次即可全局生效。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; LocaleProvider &#125; <span class="keyword">from</span> <span class="string">'antd-mobile'</span>;</div><div class="line"><span class="keyword">import</span> enUS <span class="keyword">from</span> <span class="string">'antd-mobile/lib/locale-provider/en_US'</span>;</div><div class="line">...</div><div class="line"></div><div class="line"><span class="keyword">return</span> &lt;LocaleProvider locale=&#123;enUS&#125;&gt;&lt;App /&gt;&lt;/LocaleProvider&gt;;</div></pre></td></tr></table></figure></p>
+<p>LocaleProvider使用React的context特性，只需在应用外围包裹一次即可全局生效。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123; LocaleProvider &#125; <span class="keyword">from</span> <span class="string">'antd-mobile'</span>;</div><div class="line"><span class="keyword">import</span> enUS <span class="keyword">from</span> <span class="string">'antd-mobile/lib/locale-provider/en_US'</span>;</div><div class="line">...</div><div class="line"></div><div class="line"><span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">LocaleProvider</span> <span class="attr">locale</span>=<span class="string">&#123;enUS&#125;</span>&gt;</span><span class="tag">&lt;<span class="name">App</span> /&gt;</span><span class="tag">&lt;/<span class="name">LocaleProvider</span>&gt;</span></span>;</div></pre></td></tr></table></figure></p>
 </blockquote>
 <p>使用<code>LocaleProvider</code>组件，并赋值。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// App.js</span></div><div class="line"><span class="keyword">const</span> appLocale = <span class="keyword">this</span>.getLocaleData(<span class="keyword">this</span>.props.language === <span class="string">'en-US'</span>  ? <span class="string">'en-US'</span> : <span class="string">'zh-CN'</span>);</div><div class="line">addLocaleData(...appLocale.data)</div><div class="line"></div><div class="line">&lt;LocaleProvider locale=&#123;appLocale.antd&#125;&gt;</div><div class="line">    ···</div><div class="line">&lt;<span class="regexp">/LocaleProvider&gt;</span></div></pre></td></tr></table></figure>
@@ -413,6 +436,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/react/" rel="tag"><i class="fa fa-tag"></i> react</a>
+          
+            <a href="/tags/i18n/" rel="tag"><i class="fa fa-tag"></i> i18n</a>
+          
+        </div>
+      
 
       
       
@@ -431,6 +462,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/08/关于博客最近无法访问的记录/" rel="prev" title="关于博客最近无法访问的记录">
+                关于博客最近无法访问的记录 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -502,7 +537,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -513,7 +548,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -524,7 +559,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
