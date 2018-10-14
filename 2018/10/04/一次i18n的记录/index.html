@@ -98,10 +98,10 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="一次i18n的记录">
 <meta property="og:url" content="http://xusz.cn/2018/10/04/一次i18n的记录/index.html">
-<meta property="og:site_name" content="Keep it simple">
+<meta property="og:site_name" content="前端菜鸟的笔记">
 <meta property="og:description" content="i18n——Internationalization的简称，它表明的意思是使产品具有能轻松适配指定语言和文化的能力。听起来相当唬人啊！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-08T13:49:42.823Z">
+<meta property="og:updated_time" content="2018-10-08T15:10:18.960Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一次i18n的记录">
 <meta name="twitter:description" content="i18n——Internationalization的简称，它表明的意思是使产品具有能轻松适配指定语言和文化的能力。听起来相当唬人啊！">
@@ -138,7 +138,7 @@
 
 
 
-  <title>一次i18n的记录 | Keep it simple</title>
+  <title>一次i18n的记录 | 前端菜鸟的笔记</title>
   
 
 
@@ -174,7 +174,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Keep it simple</span>
+        <span class="site-title">前端菜鸟的笔记</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -276,7 +276,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Keep it simple">
+      <meta itemprop="name" content="前端菜鸟的笔记">
     </span>
 
     
@@ -404,7 +404,7 @@
 </intlprovider></em></p>
 </blockquote>
 <p>大致意思是说，在程序运行时更新语言环境，不会触发页面的重新渲染。想要动态修改语言环境并重新渲染，必须通过key属性的变化来通知<code>IntlProvider</code>组件，语言环境已经发生改变，需要重新渲染页面。所以，这个属性是至关重要的。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;LocaleProvider locale=&#123;appLocale.antd&#125;&gt;</div><div class="line">    &lt;IntlProvider locale=&#123;appLocale.locale&#125; key=&#123;appLocale.locale&#125; messages=&#123;appLocale.messages&#125;&gt;</div><div class="line">        ···</div><div class="line">  &lt;<span class="regexp">/IntlProvider&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>LocaleProvider&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;LocaleProvider locale=&#123;appLocale.antd&#125;&gt;</div><div class="line">    &lt;IntlProvider locale=&#123;appLocale.locale&#125; key=&#123;appLocale.locale&#125; messages=&#123;appLocale.messages&#125;&gt;</div><div class="line">        ···</div><div class="line">  &lt;<span class="regexp">/IntlProvider&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>LocaleProvider&gt;</div></pre></td></tr></table></figure>
 <p>使用高阶组件（HOC）<code>injectIntl</code>，将传入的React组件与另一个React组件包装在一起，并通过props将格式化的api注入到包装组件中。在组件内部可以使用<code>this.props.intl</code>拿到注入的api和组件。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> &#123;injectIntl&#125; <span class="keyword">from</span> <span class="string">'react-intl'</span>;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">ComponentA</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">  ···</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> injectIntl(ComponentA);</div></pre></td></tr></table></figure>
 <p>到这里，i18n的结构就已经差不多了，剩下的就是一些api和组件的使用了（体力活），你可能需要维护大量的语言包。</p>
@@ -537,7 +537,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -548,7 +548,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
